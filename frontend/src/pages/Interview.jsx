@@ -109,33 +109,31 @@ const Interview = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-primary-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -m-6 p-6">
+      <div className="min-h-screen bg-gradient-to-br from-primary-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -m-4 sm:-m-6 p-4 sm:p-6">
         <div className="max-w-5xl mx-auto">
           {/* Header with Progress */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="glass-effect rounded-3xl p-6 mb-6"
+            className="glass-effect rounded-2xl sm:rounded-3xl p-4 sm:p-6 mb-4 sm:mb-6"
           >
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-purple-600 rounded-xl flex items-center justify-center">
-                  <MessageCircle className="w-6 h-6 text-white" />
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-4">
+              <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary-500 to-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
-                <div>
-                  <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Interview in Progress</h1>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                <div className="flex-1 min-w-0">
+                  <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white">Interview in Progress</h1>
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                     Question {currentQuestionIndex + 1} of {session.questions.length}
                   </p>
                 </div>
               </div>
-              <div className="hidden md:block">
-                <div className="text-right">
-                  <p className="text-3xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                    {Math.round(progress)}%
-                  </p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Complete</p>
-                </div>
+              <div className="w-full sm:w-auto text-left sm:text-right">
+                <p className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                  {Math.round(progress)}%
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">Complete</p>
               </div>
             </div>
             
@@ -152,7 +150,7 @@ const Interview = () => {
           </motion.div>
 
           {/* Question Card */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentQuestionIndex}
@@ -160,7 +158,7 @@ const Interview = () => {
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 exit={{ opacity: 0, x: 50, scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400, damping: 25, duration: 0.3 }}
-                className="glass-effect rounded-3xl p-8"
+                className="glass-effect rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8"
               >
                 <div className="flex items-start gap-4">
                   <motion.div

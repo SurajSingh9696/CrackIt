@@ -10,7 +10,11 @@ export default defineConfig({
         target: 'http://localhost:5000',
         changeOrigin: true
       }
-    }
+    },
+    historyApiFallback: true
+  },
+  preview: {
+    historyApiFallback: true
   },
   build: {
     rollupOptions: {
