@@ -111,23 +111,23 @@ const Dashboard = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-8 relative overflow-hidden rounded-3xl bg-gradient-to-r from-primary-500 via-purple-500 to-pink-500 p-8 shadow-2xl"
+          className="mb-6 sm:mb-8 relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-r from-primary-500 via-purple-500 to-pink-500 p-6 sm:p-8 shadow-2xl"
         >
           <div className="relative z-10">
             <div className="flex items-center space-x-2 mb-3">
-              <Zap className="w-6 h-6 text-yellow-300 animate-pulse" />
-              <span className="text-white/90 font-medium">Ready to improve?</span>
+              <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300 animate-pulse" />
+              <span className="text-sm sm:text-base text-white/90 font-medium">Ready to improve?</span>
             </div>
-            <h1 className="text-4xl font-bold text-white mb-2">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">
               Your Interview Prep Hub
             </h1>
-            <p className="text-white/90 text-lg">
+            <p className="text-sm sm:text-base lg:text-lg text-white/90">
               Let's ace that dream job together! 🚀
             </p>
           </div>
           {/* Animated background shapes */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-3xl" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-0 right-0 w-48 sm:w-64 h-48 sm:h-64 bg-white/10 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-0 left-0 w-32 sm:w-48 h-32 sm:h-48 bg-white/10 rounded-full blur-3xl" style={{ animationDelay: '1s' }} />
         </motion.div>
 
         {/* Stats Grid */}
@@ -135,7 +135,7 @@ const Dashboard = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8"
         >
           <motion.div
             variants={itemVariants}
@@ -210,13 +210,13 @@ const Dashboard = () => {
         </motion.div>
 
         {/* Quick Actions */}
-        <div className="mb-8">
+        <div className="mb-6 sm:mb-8">
           <motion.h2 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-2xl font-bold mb-6 flex items-center space-x-2"
+            className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center space-x-2"
           >
-            <Zap className="w-6 h-6 text-primary-600" />
+            <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600" />
             <span>Quick Actions</span>
           </motion.h2>
           <motion.div 

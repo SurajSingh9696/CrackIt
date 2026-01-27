@@ -172,33 +172,33 @@ const Profile = () => {
   return (
     <Layout>
       <Toaster position="top-right" />
-      <div className="min-h-screen bg-gradient-to-br from-primary-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -m-6 p-6">
+      <div className="min-h-screen bg-gradient-to-br from-primary-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -m-4 sm:-m-6 p-4 sm:p-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-8 pt-8"
+            className="mb-6 sm:mb-8 pt-4 sm:pt-8"
           >
-            <div className="flex items-center gap-3 mb-2">
+            <div className="flex items-center gap-2 sm:gap-3 mb-2">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 20, duration: 0.3 }}
-                className="w-16 h-16 bg-gradient-to-br from-primary-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-xl"
+                className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-purple-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-xl flex-shrink-0"
               >
-                <User className="w-8 h-8 text-white" />
+                <User className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </motion.div>
-              <div>
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <div className="flex-1 min-w-0">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                   My Profile
                 </h1>
-                <p className="text-gray-600 dark:text-gray-400">Manage your account and track your progress</p>
+                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Manage your account and track your progress</p>
               </div>
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
             {/* Profile Card */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
