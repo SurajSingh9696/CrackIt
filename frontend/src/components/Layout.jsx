@@ -72,19 +72,12 @@ const Layout = ({ children }) => {
       </AnimatePresence>
 
       {/* Sidebar with glass effect */}
-      <motion.aside
-        initial={false}
-        animate={{
-          x: isSidebarOpen ? 0 : '-100%'
-        }}
-        transition={{ type: 'tween', duration: 0.3 }}
-        className="w-64 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border-r border-gray-200/50 dark:border-gray-700/50 fixed h-full shadow-xl z-50 lg:z-10 lg:translate-x-0"
-      >
-        {/* Logo - Hidden on mobile, shown on desktop */}
+      <aside className="w-64 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border-r border-gray-200/50 dark:border-gray-700/50 fixed h-full shadow-xl z-50 lg:z-10 hidden lg:block">
+        {/* Logo */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="p-6 hidden lg:block"
+          className="p-6"
         >
           <div className="flex items-center space-x-2">
             <div className="w-14 h-14 rounded-xl flex items-center justify-center overflow-hidden">
@@ -98,21 +91,6 @@ const Layout = ({ children }) => {
             </div>
           </div>
         </motion.div>
-
-        {/* Mobile Logo Section */}
-        <div className="lg:hidden p-6 border-b border-gray-200/50 dark:border-gray-700/50">
-          <div className="flex items-center space-x-2">
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
-              <img src="/CrackIt.png" alt="CrackIt Logo" className="w-full h-full object-contain" />
-            </div>
-            <div>
-              <h1 className="text-lg font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                CrackIt
-              </h1>
-              <p className="text-xs text-gray-500 dark:text-gray-400">Interview Prep</p>
-            </div>
-          </div>
-        </div>
 
         {/* Navigation */}
         <nav className="px-4 space-y-2">
@@ -128,7 +106,6 @@ const Layout = ({ children }) => {
               >
                 <Link
                   to={item.href}
-                  onClick={closeSidebar}
                   className="relative group block"
                 >
                   <div className={`flex items-center px-4 py-3 rounded-xl transition-all duration-300 ${
@@ -191,7 +168,86 @@ const Layout = ({ children }) => {
             <span>Logout</span>
           </motion.button>
         </div>
-      </motion.aside>
+      </aside>
+
+      {/* Mobile Sidebar */}
+      <AnimatePresence>
+        {isSidebarOpen && (
+          <motion.aside
+            initial={{ x: '-100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '-100%' }}
+            transition={{ type: 'tween', duration: 0.3 }}
+            className="lg:hidden w-64 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border-r border-gray-200/50 dark:border-gray-700/50 fixed h-full shadow-xl z-50"
+          >
+            {/* Mobile Logo Section */}
+            <div className="p-6 border-b border-gray-200/50 dark:border-gray-700/50">
+              <div className="flex items-center space-x-2">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
+                  <img src="/CrackIt.png" alt="CrackIt Logo" className="w-full h-full object-contain" />
+                </div>
+                <div>
+                  <h1 className="text-lg font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                    CrackIt
+                  </h1>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Interview Prep</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation */}
+            <nav className="px-4 space-y-2 mt-4">
+              {navigation.map((item, index) => {
+                const Icon = item.icon;
+                const active = isActive(item.href);
+                return (
+                  <div key={item.name}>
+                    <Link
+                      to={item.href}
+                      onClick={closeSidebar}
+                      className="relative group block"
+                    >
+                      <div className={`flex items-center px-4 py-3 rounded-xl transition-all duration-300 ${
+                        active
+                          ? 'bg-gradient-to-r from-primary-500 to-purple-600 text-white shadow-lg shadow-primary-500/50'
+                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700/50'
+                      }`}>
+                        <Icon className="w-5 h-5 mr-3" />
+                        <span className="font-medium flex-1">{item.name}</span>
+                        {active && <ChevronRight className="w-4 h-4" />}
+                      </div>
+                      {!active && (
+                        <div className={`absolute inset-0 bg-gradient-to-r ${item.gradient} opacity-0 group-hover:opacity-10 rounded-xl transition-opacity duration-300`} />
+                      )}
+                    </Link>
+                  </div>
+                );
+              })}
+            </nav>
+
+            {/* Mobile Bottom section */}
+            <div className="absolute bottom-0 w-64 p-4 border-t border-gray-200/50 dark:border-gray-700/50 bg-white/50 dark:bg-gray-800/50 backdrop-blur-xl">
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Theme</span>
+                <button
+                  onClick={toggleTheme}
+                  className="p-2 rounded-xl bg-gradient-to-r from-primary-500 to-purple-600 text-white shadow-lg hover:shadow-xl transition-all"
+                >
+                  {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                </button>
+              </div>
+              
+              <button
+                onClick={logout}
+                className="w-full flex items-center justify-center px-4 py-2.5 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-xl transition-all font-medium shadow-sm hover:shadow-md"
+              >
+                <LogOut className="w-5 h-5 mr-2" />
+                <span>Logout</span>
+              </button>
+            </div>
+          </motion.aside>
+        )}
+      </AnimatePresence>
 
       {/* Main content */}
       <main className="flex-1 lg:ml-64">
