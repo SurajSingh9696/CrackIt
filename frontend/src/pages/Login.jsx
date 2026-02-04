@@ -37,7 +37,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-500 via-purple-500 to-pink-500 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900 px-4 relative overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-500 via-amber-500 to-orange-500 dark:from-gray-900 dark:via-amber-900 dark:to-gray-900 px-4 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div 
@@ -49,13 +49,13 @@ const Login = () => {
           variants={floatingVariants}
           animate="animate"
           style={{ animationDelay: '1s' }}
-          className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
+          className="absolute bottom-20 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"
         />
         <motion.div 
           variants={floatingVariants}
           animate="animate"
           style={{ animationDelay: '2s' }}
-          className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl"
         />
       </div>
 
@@ -76,11 +76,11 @@ const Login = () => {
             <motion.div 
               whileHover={{ rotate: 360, scale: 1.1 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-purple-600 rounded-2xl mb-4 shadow-2xl"
+              className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-amber-600 rounded-2xl mb-4 shadow-2xl"
             >
               <Sparkles className="w-10 h-10 text-white" />
             </motion.div>
-            <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary-600 to-amber-600 bg-clip-text text-transparent">
               Welcome Back
             </h1>
             <p className="text-gray-600 dark:text-gray-400">Sign in to continue your interview prep journey</p>
@@ -176,7 +176,7 @@ const Login = () => {
               Don't have an account?{' '}
               <Link 
                 to="/register" 
-                className="font-semibold text-primary-600 hover:text-purple-600 transition-colors"
+                className="font-semibold text-primary-600 hover:text-amber-600 transition-colors"
               >
                 Sign up now
               </Link>

@@ -25,11 +25,11 @@ const Layout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const navigation = [
-    { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard, gradient: 'from-blue-500 to-cyan-500' },
-    { name: 'Resume', href: '/resume', icon: FileText, gradient: 'from-purple-500 to-pink-500' },
-    { name: 'Role Selection', href: '/role', icon: Briefcase, gradient: 'from-orange-500 to-red-500' },
+    { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard, gradient: 'from-emerald-500 to-teal-500' },
+    { name: 'Resume', href: '/resume', icon: FileText, gradient: 'from-amber-500 to-orange-500' },
+    { name: 'Role Selection', href: '/role', icon: Briefcase, gradient: 'from-slate-500 to-gray-600' },
     { name: 'Analytics', href: '/analytics', icon: BarChart3, gradient: 'from-green-500 to-emerald-500' },
-    { name: 'Profile', href: '/profile', icon: User, gradient: 'from-indigo-500 to-purple-500' },
+    { name: 'Profile', href: '/profile', icon: User, gradient: 'from-teal-500 to-cyan-600' },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
   const closeSidebar = () => setIsSidebarOpen(false);
 
   return (
-    <div className="min-h-screen flex bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
+    <div className="min-h-screen flex bg-gradient-to-br from-gray-50 via-emerald-50 to-teal-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
       {/* Mobile Header */}
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 px-4 py-3">
         <div className="flex items-center justify-between">
@@ -45,13 +45,13 @@ const Layout = ({ children }) => {
             <div className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
               <img src="/CrackIt.png" alt="CrackIt Logo" className="w-full h-full object-contain" />
             </div>
-            <h1 className="text-lg font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-lg font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
               CrackIt
             </h1>
           </div>
           <button
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-            className="p-2 rounded-xl bg-gradient-to-r from-primary-500 to-purple-600 text-white shadow-lg hover:shadow-xl transition-all"
+            className="p-2 rounded-xl bg-gradient-to-r from-primary-500 to-secondary-600 text-white shadow-lg hover:shadow-xl transition-all"
           >
             {isSidebarOpen ? <CloseIcon className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -84,7 +84,7 @@ const Layout = ({ children }) => {
               <img src="/CrackIt.png" alt="CrackIt Logo" className="w-full h-full object-contain" />
             </div>
             <div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
                 CrackIt
               </h1>
               <p className="text-xs text-gray-500 dark:text-gray-400">Interview Prep</p>
@@ -110,7 +110,7 @@ const Layout = ({ children }) => {
                 >
                   <div className={`flex items-center px-4 py-3 rounded-xl transition-all duration-300 ${
                     active
-                      ? 'bg-gradient-to-r from-primary-500 to-purple-600 text-white shadow-lg shadow-primary-500/50'
+                      ? 'bg-gradient-to-r from-primary-500 to-secondary-600 text-white shadow-lg shadow-primary-500/50'
                       : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700/50'
                   }`}>
                     <Icon className="w-5 h-5 mr-3" />
@@ -142,7 +142,7 @@ const Layout = ({ children }) => {
               whileTap={{ scale: 0.9 }}
               transition={{ duration: 0.15 }}
               onClick={toggleTheme}
-              className="p-2 rounded-xl bg-gradient-to-r from-primary-500 to-purple-600 text-white shadow-lg hover:shadow-xl transition-all"
+              className="p-2 rounded-xl bg-gradient-to-r from-primary-500 to-secondary-600 text-white shadow-lg hover:shadow-xl transition-all"
             >
               <AnimatePresence mode="wait">
                 <motion.div
@@ -187,7 +187,7 @@ const Layout = ({ children }) => {
                   <img src="/CrackIt.png" alt="CrackIt Logo" className="w-full h-full object-contain" />
                 </div>
                 <div>
-                  <h1 className="text-lg font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                  <h1 className="text-lg font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
                     CrackIt
                   </h1>
                   <p className="text-xs text-gray-500 dark:text-gray-400">Interview Prep</p>
@@ -209,7 +209,7 @@ const Layout = ({ children }) => {
                     >
                       <div className={`flex items-center px-4 py-3 rounded-xl transition-all duration-300 ${
                         active
-                          ? 'bg-gradient-to-r from-primary-500 to-purple-600 text-white shadow-lg shadow-primary-500/50'
+                          ? 'bg-gradient-to-r from-primary-500 to-secondary-600 text-white shadow-lg shadow-primary-500/50'
                           : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700/50'
                       }`}>
                         <Icon className="w-5 h-5 mr-3" />
@@ -231,7 +231,7 @@ const Layout = ({ children }) => {
                 <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Theme</span>
                 <button
                   onClick={toggleTheme}
-                  className="p-2 rounded-xl bg-gradient-to-r from-primary-500 to-purple-600 text-white shadow-lg hover:shadow-xl transition-all"
+                  className="p-2 rounded-xl bg-gradient-to-r from-primary-500 to-secondary-600 text-white shadow-lg hover:shadow-xl transition-all"
                 >
                   {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                 </button>
@@ -268,7 +268,7 @@ const Layout = ({ children }) => {
             </div>
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="flex items-center space-x-2 sm:space-x-3 bg-gradient-to-r from-primary-500 to-purple-600 rounded-xl sm:rounded-2xl p-1 shadow-lg w-full sm:w-auto"
+              className="flex items-center space-x-2 sm:space-x-3 bg-gradient-to-r from-primary-500 to-secondary-600 rounded-xl sm:rounded-2xl p-1 shadow-lg w-full sm:w-auto"
             >
               <div className="bg-white dark:bg-gray-800 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 flex-1 sm:flex-initial">
                 <p className="text-xs sm:text-sm font-semibold text-gray-900 dark:text-white truncate">{user?.name}</p>

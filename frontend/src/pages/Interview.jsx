@@ -109,7 +109,7 @@ const Interview = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-primary-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -m-4 sm:-m-6 p-4 sm:p-6">
+      <div className="min-h-screen bg-gradient-to-br from-primary-50 via-secondary-50 to-amber-50 dark:from-gray-900 dark:via-slate-900/20 dark:to-amber-900/20 -m-4 sm:-m-6 p-4 sm:p-6">
         <div className="max-w-5xl mx-auto">
           {/* Header with Progress */}
           <motion.div
@@ -119,7 +119,7 @@ const Interview = () => {
           >
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-4">
               <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary-500 to-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary-500 to-teal-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
                   <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -130,7 +130,7 @@ const Interview = () => {
                 </div>
               </div>
               <div className="w-full sm:w-auto text-left sm:text-right">
-                <p className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                <p className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary-600 to-teal-600 bg-clip-text text-transparent">
                   {Math.round(progress)}%
                 </p>
                 <p className="text-xs text-gray-500 dark:text-gray-400">Complete</p>
@@ -143,7 +143,7 @@ const Interview = () => {
                 initial={{ width: 0 }}
                 animate={{ width: `${progress}%` }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="h-full bg-gradient-to-r from-primary-500 via-purple-500 to-pink-500 rounded-full"
+                className="h-full bg-gradient-to-r from-primary-500 via-secondary-500 to-teal-500 rounded-full"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 animate-shimmer" />
             </div>
@@ -165,7 +165,7 @@ const Interview = () => {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.2, type: "spring" }}
-                    className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg"
+                    className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg"
                   >
                     <Sparkles className="w-6 h-6 text-white" />
                   </motion.div>
@@ -266,9 +266,9 @@ const Interview = () => {
                   {/* Scores Grid */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                     {[
-                      { label: 'Overall', value: feedback.score, color: 'from-blue-500 to-cyan-500' },
-                      { label: 'Relevance', value: feedback.relevance, color: 'from-purple-500 to-pink-500' },
-                      { label: 'Clarity', value: feedback.clarity, color: 'from-orange-500 to-red-500' },
+                      { label: 'Overall', value: feedback.score, color: 'from-emerald-500 to-teal-500' },
+                      { label: 'Relevance', value: feedback.relevance, color: 'from-amber-500 to-orange-500' },
+                      { label: 'Clarity', value: feedback.clarity, color: 'from-slate-500 to-gray-500' },
                       { label: 'Technical', value: feedback.technicalDepth, color: 'from-green-500 to-emerald-500' }
                     ].map((metric, index) => (
                       <motion.div

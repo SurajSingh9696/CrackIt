@@ -32,7 +32,7 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-700 hover:to-purple-700 
+    @apply bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 
            text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 
            shadow-lg hover:shadow-xl hover:scale-105 active:scale-95;
   }
@@ -56,7 +56,7 @@
   }
   
   .gradient-bg {
-    @apply bg-gradient-to-br from-primary-500 via-purple-500 to-pink-500;
+    @apply bg-gradient-to-br from-primary-500 via-secondary-500 to-accent-500;
   }
   
   .glass-effect {

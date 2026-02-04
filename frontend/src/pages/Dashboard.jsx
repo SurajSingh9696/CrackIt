@@ -45,7 +45,7 @@ const Dashboard = () => {
       title: 'Upload Resume',
       description: 'Get AI-powered analysis',
       icon: Upload,
-      gradient: 'from-blue-500 to-cyan-500',
+      gradient: 'from-emerald-500 to-teal-500',
       action: () => navigate('/resume'),
       disabled: false
     },
@@ -53,7 +53,7 @@ const Dashboard = () => {
       title: 'Select Role',
       description: 'Choose target position',
       icon: Target,
-      gradient: 'from-purple-500 to-pink-500',
+      gradient: 'from-amber-500 to-orange-500',
       action: () => navigate('/role'),
       disabled: !hasResume
     },
@@ -111,7 +111,7 @@ const Dashboard = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-6 sm:mb-8 relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-r from-primary-500 via-purple-500 to-pink-500 p-6 sm:p-8 shadow-2xl"
+          className="mb-6 sm:mb-8 relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 p-6 sm:p-8 shadow-2xl"
         >
           <div className="relative z-10">
             <div className="flex items-center space-x-2 mb-3">
@@ -141,16 +141,16 @@ const Dashboard = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.02, y: -3 }}
             transition={{ duration: 0.15 }}
-            className="card bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border-none"
+            className="card bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 border-none"
           >
             <div className="flex items-start justify-between mb-4">
               <div>
                 <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">Resume Status</h3>
-                <p className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                <p className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
                   {hasResume ? 'Ready' : 'Pending'}
                 </p>
               </div>
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center shadow-lg">
                 {hasResume ? <CheckCircle2 className="w-6 h-6 text-white" /> : <FileText className="w-6 h-6 text-white" />}
               </div>
             </div>
@@ -165,16 +165,16 @@ const Dashboard = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.02, y: -3 }}
             transition={{ duration: 0.15 }}
-            className="card bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border-none"
+            className="card bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border-none"
           >
             <div className="flex items-start justify-between mb-4">
               <div>
                 <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">Target Role</h3>
-                <p className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                <p className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
                   {user?.selectedRole || 'Not Selected'}
                 </p>
               </div>
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center shadow-lg">
                 <Briefcase className="w-6 h-6 text-white" />
               </div>
             </div>
@@ -263,10 +263,10 @@ const Dashboard = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="card bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 border-none"
+            className="card bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900/20 dark:to-gray-900/20 border-none"
           >
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-slate-500 to-gray-600 rounded-xl flex items-center justify-center">
                 <Target className="w-5 h-5 text-white" />
               </div>
               <h2 className="text-2xl font-bold">Your Skills</h2>
@@ -279,7 +279,7 @@ const Dashboard = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.6 + index * 0.05, duration: 0.15 }}
                   whileHover={{ scale: 1.05, y: -1 }}
-                  className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-xl text-sm font-semibold shadow-md hover:shadow-lg transition-all cursor-default"
+                  className="px-4 py-2 bg-gradient-to-r from-slate-500 to-gray-600 text-white rounded-xl text-sm font-semibold shadow-md hover:shadow-lg transition-all cursor-default"
                 >
                   {skill}
                 </motion.span>

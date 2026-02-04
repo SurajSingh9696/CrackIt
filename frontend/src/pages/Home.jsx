@@ -30,19 +30,19 @@ const Home = () => {
       icon: Brain,
       title: 'AI-Powered Analysis',
       description: 'Advanced AI evaluates your resume and identifies key skills for targeted preparation',
-      gradient: 'from-blue-500 to-cyan-500'
+      gradient: 'from-emerald-500 to-teal-500'
     },
     {
       icon: Target,
       title: 'Role-Specific Questions',
       description: 'Get customized interview questions tailored to your target job position',
-      gradient: 'from-purple-500 to-pink-500'
+      gradient: 'from-amber-500 to-orange-500'
     },
     {
       icon: TrendingUp,
       title: 'Real-Time Feedback',
       description: 'Receive instant evaluation and actionable feedback on your answers',
-      gradient: 'from-orange-500 to-red-500'
+      gradient: 'from-slate-500 to-gray-600'
     },
     {
       icon: BarChart3,
@@ -54,13 +54,13 @@ const Home = () => {
       icon: Shield,
       title: 'Secure & Private',
       description: 'Your data is encrypted and stored securely with enterprise-grade protection',
-      gradient: 'from-indigo-500 to-purple-500'
+      gradient: 'from-slate-500 to-gray-600'
     },
     {
       icon: Clock,
       title: 'Practice Anytime',
       description: '24/7 access to mock interviews - practice at your own pace and schedule',
-      gradient: 'from-pink-500 to-rose-500'
+      gradient: 'from-amber-500 to-orange-500'
     }
   ];
 
@@ -81,7 +81,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-emerald-50 to-slate-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
@@ -95,7 +95,7 @@ const Home = () => {
                 <img src="/CrackIt.png" alt="CrackIt Logo" className="w-full h-full object-contain" />
               </div>
               <div>
-                <h1 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                <h1 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
                   CrackIt
                 </h1>
               </div>
@@ -114,7 +114,7 @@ const Home = () => {
               </Link>
               <Link
                 to="/register"
-                className="px-3 sm:px-6 py-2 text-sm sm:text-base bg-gradient-to-r from-primary-500 to-purple-600 text-white rounded-lg sm:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
+                className="px-3 sm:px-6 py-2 text-sm sm:text-base bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-lg sm:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
               >
                 Get Started
               </Link>
@@ -137,9 +137,9 @@ const Home = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.1, duration: 0.3, type: "spring", stiffness: 300, damping: 20 }}
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary-100 to-purple-100 dark:from-primary-900/30 dark:to-purple-900/30 rounded-full px-4 py-2 mb-6"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 rounded-full px-4 py-2 mb-6"
               >
-                <Zap className="w-4 h-4 text-primary-600" />
+                <Zap className="w-4 h-4 text-emerald-600" />
                 <span className="text-sm font-semibold text-primary-700 dark:text-primary-400">
                   AI-Powered Interview Practice
                 </span>
@@ -150,7 +150,7 @@ const Home = () => {
                   Ace Your Next
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-600 bg-clip-text text-transparent">
                   Interview with AI
                 </span>
               </h1>
@@ -166,7 +166,7 @@ const Home = () => {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     transition={{ duration: 0.15 }}
-                    className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-primary-500 to-purple-600 text-white rounded-2xl font-semibold shadow-2xl hover:shadow-primary-500/50 transition-all flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-2xl font-semibold shadow-2xl hover:shadow-emerald-500/50 transition-all flex items-center justify-center gap-2"
                   >
                     <span>Start Free Trial</span>
                     <ArrowRight className="w-5 h-5" />
@@ -214,7 +214,7 @@ const Home = () => {
                 <motion.div 
                   animate={{ opacity: [0.5, 0.8, 0.5], scale: [1, 1.02, 1] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute inset-0 bg-gradient-to-br from-primary-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-2xl" 
+                  className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-teal-500/20 to-amber-500/20 rounded-3xl blur-2xl" 
                 />
                 
                 <div className="relative space-y-4">
@@ -225,7 +225,7 @@ const Home = () => {
                     className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl"
                   >
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                      <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center">
                         <Brain className="w-6 h-6 text-white" />
                       </div>
                       <div>
@@ -237,9 +237,9 @@ const Home = () => {
                       "Explain the difference between SQL and NoSQL databases..."
                     </p>
                     <div className="flex gap-2">
-                      <div className="flex-1 h-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full" />
-                      <div className="flex-1 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full" />
-                      <div className="flex-1 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" />
+                      <div className="flex-1 h-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full" />
+                      <div className="flex-1 h-2 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full" />
+                      <div className="flex-1 h-2 bg-gradient-to-r from-slate-500 to-gray-600 rounded-full" />
                     </div>
                   </motion.div>
 
@@ -252,15 +252,15 @@ const Home = () => {
                     <h4 className="font-bold text-gray-900 dark:text-white mb-4">Your Progress</h4>
                     <div className="grid grid-cols-3 gap-4">
                       <div className="text-center">
-                        <p className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">85%</p>
+                        <p className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">85%</p>
                         <p className="text-xs text-gray-500 dark:text-gray-400">Score</p>
                       </div>
                       <div className="text-center">
-                        <p className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">12</p>
+                        <p className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">12</p>
                         <p className="text-xs text-gray-500 dark:text-gray-400">Sessions</p>
                       </div>
                       <div className="text-center">
-                        <p className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Pro</p>
+                        <p className="text-2xl font-bold bg-gradient-to-r from-slate-600 to-gray-600 bg-clip-text text-transparent">Pro</p>
                         <p className="text-xs text-gray-500 dark:text-gray-400">Level</p>
                       </div>
                     </div>
@@ -273,7 +273,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-gradient-to-r from-primary-500 to-purple-600">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-gradient-to-r from-emerald-500 to-teal-600">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {stats.map((stat, index) => {
@@ -344,7 +344,7 @@ const Home = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-primary-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
+      <section className="py-20 px-6 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -385,11 +385,11 @@ const Home = () => {
               className="glass-effect rounded-3xl p-8 shadow-2xl"
             >
               <div className="space-y-6">
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-2xl p-6">
+                <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-2xl p-6">
                   <h4 className="font-bold text-gray-900 dark:text-white mb-2">Upload Resume</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">AI analyzes your skills and experience</p>
                 </div>
-                <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl p-6">
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 rounded-2xl p-6">
                   <h4 className="font-bold text-gray-900 dark:text-white mb-2">Practice Interviews</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Get role-specific questions and scenarios</p>
                 </div>
@@ -410,7 +410,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-effect rounded-3xl p-12 text-center bg-gradient-to-br from-primary-500/10 to-purple-500/10"
+            className="glass-effect rounded-3xl p-12 text-center bg-gradient-to-br from-emerald-500/10 to-teal-500/10"
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 bg-clip-text text-transparent">
               Ready to Get Started?
@@ -423,7 +423,7 @@ const Home = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.15 }}
-                className="px-10 py-4 bg-gradient-to-r from-primary-500 to-purple-600 text-white rounded-2xl font-bold text-lg shadow-2xl hover:shadow-primary-500/50 transition-all inline-flex items-center gap-2"
+                className="px-10 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-2xl font-bold text-lg shadow-2xl hover:shadow-emerald-500/50 transition-all inline-flex items-center gap-2"
               >
                 <span>Start Your Free Trial</span>
                 <ArrowRight className="w-6 h-6" />
@@ -494,14 +494,14 @@ const Home = () => {
                   href="https://www.linkedin.com/in/suraj-singh-070a73213/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-blue-600 flex items-center justify-center transition-all hover:scale-110 group"
+                  className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-emerald-600 flex items-center justify-center transition-all hover:scale-110 group"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5 text-gray-700 dark:text-gray-300 group-hover:text-white" />
                 </a>
                 <a 
                   href="mailto:otheruse998877@gmail.com" 
-                  className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-red-600 flex items-center justify-center transition-all hover:scale-110 group"
+                  className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-amber-600 flex items-center justify-center transition-all hover:scale-110 group"
                   aria-label="Email"
                 >
                   <Mail className="w-5 h-5 text-gray-700 dark:text-gray-300 group-hover:text-white" />

@@ -18,7 +18,7 @@ const RoleSelection = () => {
       title: 'Frontend Developer',
       description: 'React, Vue, Angular, HTML, CSS',
       icon: Code,
-      gradient: 'from-blue-500 to-cyan-500'
+      gradient: 'from-emerald-500 to-teal-500'
     },
     {
       title: 'Backend Developer',
@@ -30,7 +30,7 @@ const RoleSelection = () => {
       title: 'Full Stack Developer',
       description: 'Frontend + Backend + Deployment',
       icon: Rocket,
-      gradient: 'from-purple-500 to-pink-500'
+      gradient: 'from-amber-500 to-orange-500'
     },
     {
       title: 'Data Analyst',
@@ -67,7 +67,7 @@ const RoleSelection = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-primary-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -m-4 sm:-m-6 p-4 sm:p-6">
+      <div className="min-h-screen bg-gradient-to-br from-primary-50 via-secondary-50 to-slate-50 dark:from-gray-900 dark:via-secondary-900/20 dark:to-slate-900/20 -m-4 sm:-m-6 p-4 sm:p-6">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <motion.div
@@ -79,11 +79,11 @@ const RoleSelection = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
-              className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary-500 to-purple-600 rounded-2xl sm:rounded-3xl mb-4 sm:mb-6 shadow-xl"
+              className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-2xl sm:rounded-3xl mb-4 sm:mb-6 shadow-xl"
             >
               <Briefcase className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
             </motion.div>
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-primary-600 via-secondary-600 to-amber-600 bg-clip-text text-transparent">
               Select Your Target Role
             </h1>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-4">
@@ -120,7 +120,7 @@ const RoleSelection = () => {
                     <motion.div
                       initial={{ scale: 0, rotate: -180 }}
                       animate={{ scale: 1, rotate: 0 }}
-                      className="absolute top-4 right-4 w-8 h-8 bg-gradient-to-br from-primary-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg"
+                      className="absolute top-4 right-4 w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-full flex items-center justify-center shadow-lg"
                     >
                       <Check className="w-5 h-5 text-white" />
                     </motion.div>
@@ -157,7 +157,7 @@ const RoleSelection = () => {
             className="glass-effect rounded-3xl p-8 mb-8"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-slate-500 to-gray-600 rounded-xl flex items-center justify-center">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
               <div>

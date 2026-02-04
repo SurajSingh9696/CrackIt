@@ -58,7 +58,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 dark:from-gray-900 dark:via-pink-900 dark:to-gray-900 px-4 py-12 relative overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 dark:from-gray-900 dark:via-teal-900 dark:to-gray-900 px-4 py-12 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div 
@@ -70,13 +70,13 @@ const Register = () => {
           variants={floatingVariants}
           animate="animate"
           style={{ animationDelay: '1s' }}
-          className="absolute bottom-10 right-20 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl"
+          className="absolute bottom-10 right-20 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl"
         />
         <motion.div 
           variants={floatingVariants}
           animate="animate"
           style={{ animationDelay: '1.5s' }}
-          className="absolute top-1/3 right-1/3 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"
+          className="absolute top-1/3 right-1/3 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"
         />
       </div>
 
@@ -97,11 +97,11 @@ const Register = () => {
             <motion.div 
               whileHover={{ rotate: 360, scale: 1.1 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl mb-4 shadow-2xl"
+              className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl mb-4 shadow-2xl"
             >
               <UserPlus className="w-10 h-10 text-white" />
             </motion.div>
-            <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
               Join Us Today
             </h1>
             <p className="text-gray-600 dark:text-gray-400">Start your interview preparation journey</p>
@@ -246,19 +246,19 @@ const Register = () => {
                 id="terms"
                 checked={acceptedTerms}
                 onChange={(e) => setAcceptedTerms(e.target.checked)}
-                className="w-5 h-5 mt-0.5 text-purple-600 bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded focus:ring-purple-500 focus:ring-2 cursor-pointer"
+                className="w-5 h-5 mt-0.5 text-emerald-600 bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded focus:ring-emerald-500 focus:ring-2 cursor-pointer"
               />
               <label htmlFor="terms" className="text-sm text-gray-600 dark:text-gray-400 cursor-pointer">
                 I agree to the{' '}
-                <Link to="/terms" className="font-semibold text-purple-600 hover:text-pink-600 transition-colors" target="_blank">
+                <Link to="/terms" className="font-semibold text-emerald-600 hover:text-teal-600 transition-colors" target="_blank">
                   Terms & Conditions
                 </Link>
                 ,{' '}
-                <Link to="/privacy-policy" className="font-semibold text-purple-600 hover:text-pink-600 transition-colors" target="_blank">
+                <Link to="/privacy-policy" className="font-semibold text-emerald-600 hover:text-teal-600 transition-colors" target="_blank">
                   Privacy Policy
                 </Link>
                 , and{' '}
-                <Link to="/cookie-policy" className="font-semibold text-purple-600 hover:text-pink-600 transition-colors" target="_blank">
+                <Link to="/cookie-policy" className="font-semibold text-emerald-600 hover:text-teal-600 transition-colors" target="_blank">
                   Cookie Policy
                 </Link>
               </label>
@@ -299,7 +299,7 @@ const Register = () => {
               Already have an account?{' '}
               <Link 
                 to="/login" 
-                className="font-semibold text-purple-600 hover:text-pink-600 transition-colors"
+                className="font-semibold text-emerald-600 hover:text-teal-600 transition-colors"
               >
                 Sign in here
               </Link>

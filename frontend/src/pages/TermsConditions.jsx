@@ -67,7 +67,7 @@ const TermsConditions = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-emerald-50 to-slate-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
       {/* Header */}
       <nav className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -89,7 +89,7 @@ const TermsConditions = () => {
           className="mb-12"
         >
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-xl">
+            <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-2xl flex items-center justify-center shadow-xl">
               <FileText className="w-8 h-8 text-white" />
             </div>
             <div>
@@ -152,7 +152,7 @@ const TermsConditions = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/register"
-              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-purple-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
+              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
               Accept & Continue
             </Link>

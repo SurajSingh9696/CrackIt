@@ -55,7 +55,7 @@ const InterviewComplete = () => {
     const colors = {
       'Beginner': 'from-red-500 to-orange-500',
       'Intermediate': 'from-yellow-500 to-orange-500',
-      'Advanced': 'from-blue-500 to-cyan-500',
+      'Advanced': 'from-emerald-500 to-teal-500',
       'Expert': 'from-green-500 to-emerald-500'
     };
     return colors[level] || 'from-gray-500 to-gray-600';
@@ -65,7 +65,7 @@ const InterviewComplete = () => {
     const backgrounds = {
       'Beginner': 'from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20',
       'Intermediate': 'from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20',
-      'Advanced': 'from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20',
+      'Advanced': 'from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20',
       'Expert': 'from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20'
     };
     return backgrounds[level] || 'from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900';
@@ -96,7 +96,7 @@ const InterviewComplete = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-primary-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -m-4 sm:-m-6 p-4 sm:p-6">
+      <div className="min-h-screen bg-gradient-to-br from-primary-50 via-secondary-50 to-amber-50 dark:from-gray-900 dark:via-slate-900/20 dark:to-amber-900/20 -m-4 sm:-m-6 p-4 sm:p-6">
         <div className="max-w-6xl mx-auto">
           {/* Celebration Header */}
           <motion.div
@@ -117,7 +117,7 @@ const InterviewComplete = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-primary-600 via-secondary-600 to-amber-600 bg-clip-text text-transparent"
             >
               Interview Complete! 🎉
             </motion.h1>
@@ -144,10 +144,10 @@ const InterviewComplete = () => {
               whileHover={{ scale: 1.05, y: -5 }}
               className="glass-effect rounded-3xl p-8 text-center relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-purple-500/10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-teal-500/10" />
               <div className="relative">
                 <Award className="w-12 h-12 text-primary-600 mx-auto mb-4" />
-                <div className="text-6xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                <div className="text-6xl font-bold bg-gradient-to-r from-primary-600 to-teal-600 bg-clip-text text-transparent mb-2">
                   {results.overallScore}
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 font-semibold">Overall Score</p>
@@ -174,10 +174,10 @@ const InterviewComplete = () => {
               whileHover={{ scale: 1.05, y: -5 }}
               className="glass-effect rounded-3xl p-8 text-center relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-orange-500/10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-orange-500/10" />
               <div className="relative">
-                <Clock className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-                <div className="text-6xl font-bold bg-gradient-to-r from-pink-600 to-orange-600 bg-clip-text text-transparent mb-2">
+                <Clock className="w-12 h-12 text-amber-600 mx-auto mb-4" />
+                <div className="text-6xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent mb-2">
                   {results.duration}m
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 font-semibold">Duration</p>
@@ -193,7 +193,7 @@ const InterviewComplete = () => {
             className="glass-effect rounded-3xl p-8 mb-8"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center">
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Performance Breakdown</h2>
@@ -215,7 +215,7 @@ const InterviewComplete = () => {
                       width: `${(results.questions.filter(q => q.answer).length / results.questions.length) * 100}%` 
                     }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className="h-full bg-gradient-to-r from-primary-500 to-purple-500 rounded-full"
+                    className="h-full bg-gradient-to-r from-primary-500 to-teal-500 rounded-full"
                   />
                 </div>
               </div>
@@ -281,7 +281,7 @@ const InterviewComplete = () => {
                           }%`
                         }}
                         transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-                        className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"
+                        className="h-full bg-gradient-to-r from-slate-500 to-gray-500 rounded-full"
                       />
                     </div>
                   </div>
@@ -298,7 +298,7 @@ const InterviewComplete = () => {
             className="glass-effect rounded-3xl p-8 mb-8"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Next Steps</h2>
@@ -313,7 +313,7 @@ const InterviewComplete = () => {
                   transition={{ delay: 0.6 + (0.1 * index) }}
                   className="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 rounded-2xl hover:shadow-lg transition-shadow"
                 >
-                  <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <CheckCircle2 className="w-5 h-5 text-white" />
                   </div>
                   <span className="text-gray-700 dark:text-gray-300 pt-1">{suggestion}</span>

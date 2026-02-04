@@ -19,7 +19,7 @@ const LoadingSpinner = ({ size = 'md', text = 'Loading...' }) => {
           rotate: { duration: 1.5, repeat: Infinity, ease: "linear" },
           scale: { duration: 1, repeat: Infinity, ease: "easeInOut" }
         }}
-        className={`${sizes[size]} bg-gradient-to-br from-primary-500 to-purple-500 rounded-2xl flex items-center justify-center shadow-xl mb-4`}
+        className={`${sizes[size]} bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center shadow-xl mb-4`}
       >
         <Loader className="w-1/2 h-1/2 text-white" />
       </motion.div>

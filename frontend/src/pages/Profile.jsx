@@ -144,14 +144,14 @@ const Profile = () => {
       title: 'Expert Level', 
       description: 'Reached Expert readiness level',
       unlocked: stats?.readinessLevel === 'Expert',
-      gradient: 'from-purple-500 to-pink-500'
+      gradient: 'from-amber-500 to-orange-500'
     },
     { 
       icon: Zap, 
       title: 'Speed Demon', 
       description: 'Completed 5+ interviews',
       unlocked: stats?.totalSessions >= 5,
-      gradient: 'from-blue-500 to-cyan-500'
+      gradient: 'from-emerald-500 to-teal-500'
     },
   ];
 
@@ -172,7 +172,7 @@ const Profile = () => {
   return (
     <Layout>
       <Toaster position="top-right" />
-      <div className="min-h-screen bg-gradient-to-br from-primary-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -m-4 sm:-m-6 p-4 sm:p-6">
+      <div className="min-h-screen bg-gradient-to-br from-primary-50 via-amber-50 to-slate-50 dark:from-gray-900 dark:via-amber-900/20 dark:to-slate-900/20 -m-4 sm:-m-6 p-4 sm:p-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <motion.div
@@ -185,12 +185,12 @@ const Profile = () => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 20, duration: 0.3 }}
-                className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-purple-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-xl flex-shrink-0"
+                className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-amber-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-xl flex-shrink-0"
               >
                 <User className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </motion.div>
               <div className="flex-1 min-w-0">
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary-600 via-amber-600 to-orange-600 bg-clip-text text-transparent">
                   My Profile
                 </h1>
                 <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Manage your account and track your progress</p>
@@ -208,12 +208,12 @@ const Profile = () => {
             >
               <div className="glass-effect rounded-3xl p-8 relative overflow-hidden">
                 {/* Background gradient */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary-500/20 to-purple-500/20 rounded-full blur-3xl -z-10" />
+                <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary-500/20 to-amber-500/20 rounded-full blur-3xl -z-10" />
                 
                 {/* Edit Button */}
                 <div className="flex justify-between items-start mb-6">
                   <div className="flex items-center gap-3">
-                    <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-purple-600 rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-xl">
+                    <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-amber-600 rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-xl">
                       {user?.name?.charAt(0).toUpperCase()}
                     </div>
                     <div>
@@ -230,7 +230,7 @@ const Profile = () => {
                       whileTap={{ scale: 0.98 }}
                       transition={{ duration: 0.15 }}
                       onClick={() => setIsEditing(true)}
-                      className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-500 to-purple-600 text-white rounded-xl shadow-lg hover:shadow-xl transition-all"
+                      className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-500 to-amber-600 text-white rounded-xl shadow-lg hover:shadow-xl transition-all"
                     >
                       <Edit2 className="w-4 h-4" />
                       <span>Edit Profile</span>
@@ -340,20 +340,20 @@ const Profile = () => {
                 <div className="space-y-4">
                   <motion.div 
                     whileHover={{ scale: 1.02 }}
-                    className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-2xl p-4"
+                    className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-2xl p-4"
                   >
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Total Sessions</p>
-                    <p className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                    <p className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
                       {stats?.totalSessions || 0}
                     </p>
                   </motion.div>
 
                   <motion.div 
                     whileHover={{ scale: 1.02 }}
-                    className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl p-4"
+                    className="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 rounded-2xl p-4"
                   >
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Average Score</p>
-                    <p className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                    <p className="text-3xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
                       {stats?.averageScore || 0}
                     </p>
                   </motion.div>
@@ -467,7 +467,7 @@ const Profile = () => {
               {/* Change Password */}
               <div className="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
                 <div className="flex items-center gap-2 mb-4">
-                  <Lock className="w-5 h-5 text-blue-600" />
+                  <Lock className="w-5 h-5 text-emerald-600" />
                   <h3 className="font-bold text-gray-900 dark:text-white">Change Password</h3>
                 </div>
                 <div className="space-y-4">
@@ -486,7 +486,7 @@ const Profile = () => {
                     whileTap={{ scale: 0.98 }}
                     transition={{ duration: 0.15 }}
                     onClick={() => setShowPasswordModal(true)}
-                    className="w-full px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-xl text-sm font-semibold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2"
+                    className="w-full px-4 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-xl text-sm font-semibold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2"
                   >
                     <Lock className="w-4 h-4" />
                     Change Password
@@ -534,7 +534,7 @@ const Profile = () => {
             className="glass-effect rounded-3xl p-8 max-w-md w-full shadow-2xl"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center">
                 <Lock className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Change Password</h2>
@@ -587,7 +587,7 @@ const Profile = () => {
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.15 }}
                 onClick={handleChangePassword}
-                className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all"
+                className="flex-1 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all"
               >
                 Change Password
               </motion.button>
